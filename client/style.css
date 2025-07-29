@@ -1,78 +1,86 @@
+/* General styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #eef2f3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, #87CEEB, #ffffff); /* Gradient background */
+  min-height: 100vh; /* Ensures the background fills the screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-container {
+  max-width: 1000px; /* Increased width for larger screens */
+  width: 90%; /* Ensures responsiveness */
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+  color: #333;
+}
+
+button {
+  padding: 15px 30px; /* Increased button size */
+  margin: 10px;
+  font-size: 18px; /* Larger font size */
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#flag-container img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
   .quiz-container {
-    background: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 320px;
   }
-  
-  #flag {
+
+  button {
     width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    margin-bottom: 15px;
+    font-size: 16px;
+    margin: 10px 0;
   }
-  
-  #options button {
-    display: block;
-    margin: 5px 0;
-    width: 100%;
-    padding: 10px;
-    background-color: #e0e0e0;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
+
+  h1 {
+    font-size: 28px;
   }
-  
-  #options button:hover {
-    background-color: #d0d0d0;
+
+  h2 {
+    font-size: 20px;
   }
-  
-  #feedback {
-    margin-top: 10px;
-    font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
   }
-  
-  #next-btn {
-    margin-top: 15px;
-    padding: 10px;
-    display: none;
-    width: 100%;
-    background-color: #90caf9;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+
+  h2 {
+    font-size: 18px;
   }
-  
-  #next-btn:hover {
-    background-color: #64b5f6;
+
+  button {
+    font-size: 16px;
   }
-  
-  #menu button {
-    display: block;
-    margin: 10px auto;
-    padding: 10px 20px;
-    width: 80%;
-    background-color: #90caf9;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  #menu button:hover {
-    background-color: #64b5f6;
-  }
-  
+}
