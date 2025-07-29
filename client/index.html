@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Flaggenquiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Flaggenquiz</h1>
+    <div id="menu">
+      <h2>Wähle ein Gebiet:</h2>
+      <button onclick="startQuiz('Europa')">Europa</button>
+      <button onclick="startQuiz('Ozeanien')">Ozeanien</button>
+      <button onclick="startQuiz('Asien')">Asien</button>
+      <button onclick="startQuiz('Afrika')">Afrika</button>
+      <button onclick="startQuiz('Amerika')">Amerika</button>
+    </div>
+
+    <div id="quiz" style="display:none;">
+      <div id="flag-container"><img id="flag" src="" alt="Flagge"></div>
+      <div id="options"></div>
+      <div id="feedback"></div>
+      <button id="next-btn">Nächste Frage</button>
+    </div>
+
+    <div id="end-screen" style="display:none;">
+      <h2>Quiz beendet!</h2>
+      <p id="score"></p>
+      <button onclick="returnToMenu()">Zurück zum Hauptmenü</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
